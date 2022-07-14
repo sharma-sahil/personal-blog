@@ -1,20 +1,20 @@
 ---
 layout: page
-title: About Author
+title: Portfolio
 permalink: /about/
 ---
 
-<!-- <ul>
-  {% for author in site.authors %}
-      <h2>{{ author.name }}</h2>
-      <h3>{{ author.position }}</h3>
-      <p>{{ author.content | markdownify }}</p>
+<ul>
+  {% for project in site.projects %}
+      <h2>{{ project.name }} 
+        <p class="post-meta">
+          <span>{{ project.startDate }}</span> - <span>{{ project.endDate }}</span>
+        </p>
+      </h2>
+      <p> {{ project.content | markdownify }}</p>
   {% endfor %}
-</ul> -->
+</ul>
 
-## Sahil Sharma
-### Staff Engineer
-Sahil is a software engineer who belongs to Punjab, India
 
 <!-- This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
