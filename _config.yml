@@ -21,7 +21,7 @@
 title: Sahil's Blog
 email: sahilsharma7595@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  This is a personal blog created out of curiosity to get hands on experience on the jekyll.
+  Blog powered by jekyll
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://sharma-sahil.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
@@ -36,6 +36,9 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+
+disqus:
+  shortname: sharma_sahil95
 
 collections:
   projects:
