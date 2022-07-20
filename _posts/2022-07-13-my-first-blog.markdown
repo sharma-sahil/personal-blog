@@ -10,15 +10,13 @@ comments: true
 In this blog, I will talk about how I published my first blog for free using [github][github-home], [github-pages][github-pages] and [jekyll][jekyll-home].
 
 
-
-
 ## Steps to publish a blog
 
 ### 1. Create a new jekyll project
 *  Install the prerequisite as mentioned in the [jekyll installation docs][jekyll-ins-docs] to setup the system for creating a jekyll project.
 *  Create a new jekyll project by following the simple steps mentioned in the [docs][jekyll-qs].
 
-Now after the above step you should have a working jekyll project in your system. If you are just gettings your hand dirty to check how this whole process works you can leave the code as it is for now. As the code is sufficient to publish a blog.
+Now after the above step you should have a working jekyll project in your system. If you are just gettings your hand dirty to check how this whole process works you can leave the code as it is for now. As the code is sufficient to publish a blog. Or if you want to customize this code you can do that also by following simple step by step tutorial available in jekyll [docs][jekyll-tutorail].
 
 ### 2. Push the code to github
 * Create a [github][github-home] account if you do not have one already.
@@ -29,12 +27,12 @@ Now after the above step you should have a working jekyll project in your system
   git init
   git commit -m "first commit"
   git branch -M main
-  git remote add origin {link to the github repository}
+  git remote add origin https://github.com/<github_username>/<repositoryName>.git
   git push -u origin main
   ```
 
 ### 3. Build the code using github actions
-Till now we have created a sample project and also published the code to the github repository. But to deploy and publish it we need to build the project first which will create static files. These static files can be deployed on any server of your choice. Since we are using Github Pages to deploy the code, We will use Github Actions to build project and generate Artifactories. This will be an automated process. Means the latest code will be build and deployed automatically once the code is committed to the github repository. It's easy to integrate Github Actions to build and deploy code generated using jekyll. Follow the steps below to integrate Github Actions
+Till now we have created a sample project and also pushed the code to the github repository. But to deploy and publish it we need to build the project first which will generate static files. These static files can be deployed on any server of your choice. Since we are using Github Pages to deploy the code, We will use Github Actions to build project and generate static files. This will be an automated process which means the latest code will be build and deployed automatically once the code is committed to the github repository. It's easy to integrate Github Actions to build and deploy code generated using jekyll. Follow the steps below to integrate Github Actions
 
 * Create a new folder in the source code with the name `.github` and create another folder inside the `.github` folder with the name `workflows`.
 * Inside the `workflows` folder create a new file with the name `github-pages.yml`.
@@ -87,11 +85,11 @@ Now we have everything we need in order to publish our site and make it availabl
 * In the Github Pages option, there is an option to select `source`. In this  we need to select the branch which we will use to publish our site on the Github Pages.
 * Select the `gh-pages` branch name and click `Save`.
 
-You might wonder that we did not created a new branch named `gh-pages` but still a new branch with this name is available for selection. This happened because while configuring the Github Actions we provided the name of the branch which will be used to publish the site on the line number 28 in the `github-pages.yml` file. You can choose any branch name in the yml at this line but make sure that same branch name is configured in the Github Pages settings also.
+You might wonder that we did not create a new branch named `gh-pages` but still a new branch with this name is available for selection. This happened because while configuring the Github Actions we provided the name of the branch which will be used to publish the site on the line number 28 in the `github-pages.yml` file. You can choose any branch name in the yml at this line but make sure that same branch name is configured in the Github Pages settings also.
 
 After this step your site will be published on the internet and can be accessed using the link `https://grumpyCat.github.io`. Here `grumpyCat` is your unique github username. This link will also be visible in the Github Pages Settings if everything is configured correctly.
 
-Now coming to the part why we named our repository in a specific way. If a user have multiple github repositories, then all of them can be published using Github Pages. But the link to access those published sites would be different. e.g. if you had created a repository with name `my-first-blog`, then the site published on the internet with Github Pages from this repository will be available at the link `https://grumpyCat.github.io/my-first-blog`
+Now coming to the part why we named our repository in a specific way. If a user have multiple github repositories, then all of them can be published using Github Pages. But the link to access those published sites would be different. e.g. if you had created a repository with name `my-first-blog`, then the site published on the internet with Github Pages from this repository will be available at the link `https://grumpyCat.github.io/my-first-blog`. The name of the repository will appear in the URL. But if the repository is created with github username, then the public URL will be `https://<username>.github.io` only.
 
 To read more about this please refer to the official docs of Github Pages available at [Github Pages Docs][github-pages-docs]
 
@@ -100,13 +98,11 @@ That's it for today's blog. If you liked it then do share your support by giving
 Also all of the code for this is present in my github repo available at [personal-blog][my-code-repo]
 
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
 [jekyll-home]: https://jekyllrb.com/
 [github-home]: https://github.com/
 [github-pages]: https://pages.github.com/
 [jekyll-ins-docs]: https://jekyllrb.com/docs/installation/
 [jekyll-qs]: https://jekyllrb.com/docs/
+[jekyll-tutorail]: https://jekyllrb.com/docs/step-by-step/01-setup/
 [github-pages-docs]: https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages
-[my-code-repo]: https://github.com/sharma-sahil/personal-blog
+[my-code-repo]: https://github.com/sharma-sahil/personal-blog/tree/github-actions
