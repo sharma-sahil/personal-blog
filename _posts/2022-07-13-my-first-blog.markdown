@@ -95,7 +95,7 @@ To read more about this please refer to the official docs of Github Pages availa
 
 That's it for today's blog. If you liked it then do share your support by giving a star on my github repo. 
 
-Also all of the code for this is present in my github repo available at [personal-blog][my-code-repo]
+All of the code for this demonstrations is present in my github repo [personal-blog][my-code-repo]
 
 
 [jekyll-home]: https://jekyllrb.com/
