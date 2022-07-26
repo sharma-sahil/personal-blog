@@ -4,6 +4,7 @@ title:  "My First Blog"
 date:   2022-07-13 15:21:10 +0530
 author: Sahil Sharma
 comments: true
+permalink: posts/my-first-blog
 ---
 
 <!-- # How I published my first blog -->
