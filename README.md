@@ -1,6 +1,7 @@
-# sharma-sahil.github.io
+# Personal Blog
 
-Please head over to [sharma-sahil.github.io][sharma-sahil.github.io] to read my personal blog.
+Head over to [thesahilsharma.in][thesahilsharma.in] to read my personal blog.
 
 
-[sharma-sahil.github.io]: https://sharma-sahil.github.io/
+[thesahilsharma.in]: https://thesahilsharma.in/
+
